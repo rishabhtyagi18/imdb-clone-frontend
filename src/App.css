@@ -1,38 +1,310 @@
-.App {
+.container--main {
+  width: 80%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  display: flex;
+  background: #ffffff;
+  width: 32%;
+  cursor: pointer;
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   text-align: center;
+  padding: 1.875rem 3rem;
+  flex-direction: column;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card--img {
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h3 {
+  color: #ffffff;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card--content h3 {
+  color: #000000;
+}
+
+.star-icon {
+  width: 20px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.move-to-end {
+  margin: auto;
+  width: 10%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.move-to-end p {
+  font-weight: bold;
+  font-size: 32;
 }
 
-@keyframes App-logo-spin {
+.card--container {
+  display: flex;
+  padding-top: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  height: 100%;
+}
+
+.card--content {
+  padding: 5px 5px 5px 30px;
+  justify-items: start;
+  gap: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card--content h3 {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.card--content p {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+.regular-text {
+  font-weight: normal;
+  margin-left: 4px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 40px;
+  align-items: center;
+  position: sticky;
+  background: #071c2c;
+  top: 0;
+}
+
+.navbar h1 {
+  font-size: 20px;
+}
+
+.navbar--links-header {
+  display: flex;
+  gap: 20px;
+}
+
+.navbar--links {
+  display: flex;
+  gap: 10px;
+  font-size: 14px;
+}
+
+.profile--container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  cursor: pointer;
+}
+
+.profile--box {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.profile--box p {
+  font-weight: 400;
+  font-size: 22px;
+}
+
+.usericon {
+  height: 24px;
+  width: 24px;
+}
+
+.profile--background {
+  background-color: #caf0f8;
+  border-radius: 10px;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login--container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 300px;
+  top: 100px;
+}
+
+.input--container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.input--container label {
+  font-weight: 600;
+}
+
+.input--container input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #fff;
+  width: 100%;
+  border: 1px solid #071c2c;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.login--container button {
+  outline: none;
+  border: none;
+  background-color: #071c2c;
+  padding: 15px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 5px;
+  color: #ffffff;
+  text-transform: uppercase;
+}
+
+.link--containers {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: center;
+}
+
+.nav--links {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.link {
+  text-decoration: none;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.link h3 {
+  font-size: 25px;
+}
+
+.logout--btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  color: #ffffff;
+  font-size: 16px;
+}
+
+.edit--input {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  gap: 5px;
+}
+
+.edit--input label {
+  font-weight: 500;
+}
+
+.edit--input input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #fff;
+  width: 100%;
+  border: 2px solid #071c2c;
+  margin: 0 0 15px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.button--container {
+  display: flex;
+  gap: 10px;
+}
+
+.button--container button {
+  height: 40px;
+  padding: 0px 10px;
+  background: #e02020;
+  color: #fff;
+  border: 1px solid #e02020;
+  font-size: 16px;
+  border-radius: 5px;
+  width: fit-content;
+  font-weight: 600;
+}
+
+
+.edit--container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.flex--container {
+  padding-top: 10px;
+  display: flex;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.red-astrik{
+  color: red;
+}
+
+.loading--container {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 90vh;
+}
+
+.loading {
+  border-bottom: 4px solid rgba(0, 0, 0, .2);
+  border-left: 4px solid rgba(0, 0, 0, .2);
+  border-right: 4px solid rgba(0, 0, 0, .2);
+  border-top: 4px solid rgba(0, 0, 0, .5);
+  border-radius: 100%;
+  height: 32px;
+  width: 32px;
+  animation: spin .6s infinite linear;
+  text-indent: 999em;
+  margin: 3em auto;
+}
+
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
+
   to {
-    transform: rotate(360deg);
+    transform: rotate(359deg);
   }
 }
