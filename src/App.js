@@ -10,6 +10,7 @@ import AddMovie from "./pages/AddMovie";
 import Signup from "./pages/Signup";
 import Protect from "./components/Protect";
 import { Navigate } from "react-router-dom";
+import NotFound from "./pages/NotFound";
 
 function App() {
   return (
@@ -18,8 +19,7 @@ function App() {
         <Navbar />
         <div className="container--main">
           <Routes>
-            <Route path="/home" element={<Home url={"/movie"} />} />
-            <Route path="/" element={<Navigate to="/home" replace />} />
+            <Route path="/" element={<Home url={"/movie"} />} />
             <Route
               path="/moviesbyproducer/:id"
               element={<Home url={"/producer"} />}
@@ -40,6 +40,7 @@ function App() {
               path="/editmovie/:id"
               element={<Protect Component={AddMovie} />}
             />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
       </Router>
